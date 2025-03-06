@@ -2,12 +2,12 @@ name: Super-Liner-Test #worflow Name
 on: push #Event
 
 jobs:
-    super-lint-job:
+    super-lint-job: #jobs
         name: Lint Code base test
-        runs-on: ubuntu-latest
-        steps:
+        runs-on: ubuntu-latest #runner
+        steps: #steps
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v3 #Action
             - name: Run super Linter
               uses: github/super-linter@v4
               env:
