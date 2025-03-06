@@ -1,0 +1,15 @@
+name: Super-Liner-Test #worflow Name
+on: push #Event
+
+jobs:
+    super-lint-job:
+        name: Lint Code base test
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+            - name: Run super Linter
+              uses: github/super-linter@v4
+              env:
+                DEFAULT_BRANCH: main    
+
